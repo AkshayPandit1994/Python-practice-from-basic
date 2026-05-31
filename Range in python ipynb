@@ -1,0 +1,1259 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "fd8b7261-40b2-4e29-b29f-b32a7610fd68",
+   "metadata": {},
+   "source": [
+    "The range() data type is used extensively in Python for looping, indexing, generating sequences, and automating repetitive tasks, which are common in Data Analysis.\n",
+    "\n",
+    "what is range:  range() is a built-in Python data type that generates a sequence of numbers.\n",
+    "\n",
+    "\n",
+    "Why Data Analysts Use range()\n",
+    "\n",
+    "Common scenarios:\n",
+    "\n",
+    "Loop through rows\n",
+    "Process columns\n",
+    "Create indexes\n",
+    "Generate IDs\n",
+    "Automate calculations\n",
+    "Handle time periods\n",
+    "Sampling data\n",
+    "Window analysis\n",
+    "\n",
+    "Syntax: range(stop value)\n",
+    "# range (start, stop)\n",
+    "# range (start, stop, step)\n",
+    "\n",
+    "\n",
+    "Important Facts for Data Analysts: \n",
+    "\n",
+    "| Fact                     | Explanation                      |\n",
+    "| ------------------------ | -------------------------------- |\n",
+    "| `range()` is immutable   | Values cannot be changed         |\n",
+    "| Stop value excluded      | `range(5)` gives 0-4             |\n",
+    "| Memory efficient         | Doesn't store all values at once |\n",
+    "| Mostly used with loops   | Common in automation             |\n",
+    "| Works with indexing      | Useful in row/column processing  |\n",
+    "| Supports negative step   | Useful for reverse analysis      |\n",
+    "| Can be converted to list | `list(range())`                  |\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ac5e794b-dc14-46a7-8c8d-b0cf32926868",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "4db15a4d-a15e-4a40-b1c4-b570ad57cf6c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "range(0, 6)\n"
+     ]
+    }
+   ],
+   "source": [
+    "r= range(6)\n",
+    "print(r)                # it will only give o/p as (0,6) to see the numbers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "690f4f4c-94ad-419a-97b4-f949d5f251c3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[0, 1, 2, 3, 4, 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(list(r))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "96578d4d-ebdd-400c-bbfc-ac06fd59e0f7",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f08ee655-4989-4ff8-8268-15d91270b136",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "range(0, 5)"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "range(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "407de3ff-4fd9-4a16-9f72-769e374d1b4b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "5c235ef0-bef5-4336-9a00-590fbc59363e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(5):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f27ea5f2-07a0-42f8-86bc-df9080ed4bdd",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "76fc7d0d-c7a5-461c-8f32-44235f99858f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n"
+     ]
+    }
+   ],
+   "source": [
+    "# two arguments\n",
+    "# range (start, stop)\n",
+    "\n",
+    "for i in range(5,10):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7ff31fe4-0312-4841-949c-3ac28c989856",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "fa43ae2a-e0b1-4e10-b83a-b0b03db4e8c8",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "3\n",
+      "6\n",
+      "9\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 3 arguments\n",
+    "# range (start, stop, step)\n",
+    "\n",
+    "for i in range(0,10,3):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bea37db1-40a9-4712-a515-928b07a504fd",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "2e9e72a6-1997-48ea-ab0d-609d18a42089",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "9\n",
+      "8\n",
+      "7\n",
+      "6\n",
+      "5\n",
+      "4\n",
+      "3\n",
+      "2\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# negative range: very useful in reverse analysis\n",
+    "\n",
+    "for i in range(10,0,-1):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2efdfac9-ee26-4650-8989-b6ffc94552a9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "5e67604a-0fce-4a47-9821-e87bbad0f30a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "range(5, 12)\n",
+      "<class 'range'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# convert range to list\n",
+    "\n",
+    "d = range(5,12)\n",
+    "print(d)\n",
+    "print(type(d))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "cb988c99-c5d2-45e4-914a-df4631827a5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5, 6, 7, 8, 9, 10, 11]\n",
+      "<class 'list'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "d = list(range(5,12))\n",
+    "\n",
+    "print(d)\n",
+    "print(type(d))                # Data analysts often create sequences like this."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "11dacea1-5fb6-4312-856d-4ab102c776c9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "62bda195-be23-4443-85bc-490416130ccb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# generate custom ID's\n",
+    "\n",
+    "cust_ID = list(range(100,111))\n",
+    "print(cust_ID)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "67fa7531-3163-4627-9e8b-89437de5b49e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "3ad813f8-1de0-4b60-b47c-b078e272b15b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 10\n",
+      "1 20\n",
+      "2 55\n",
+      "3 69\n",
+      "4 75\n",
+      "5 100\n"
+     ]
+    }
+   ],
+   "source": [
+    "# proces every record\n",
+    "\n",
+    "sales =  [10,20,55,69,75,100]\n",
+    "\n",
+    "for i in range(len(sales)):\n",
+    "    print(i,sales[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "5fae638c-1c76-4a7a-91f8-9525eeaea794",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "sales =  [10,20,55,69,75,100]\n",
+    "\n",
+    "for i in range(len(sales)):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "4dd58817-e704-4768-a9d2-751e72296a3f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "20\n",
+      "55\n",
+      "69\n",
+      "75\n",
+      "100\n"
+     ]
+    }
+   ],
+   "source": [
+    "sales =  [10,20,55,69,75,100]\n",
+    "\n",
+    "for i in range(len(sales)):\n",
+    "    print(sales[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7d1f321d-c903-4f18-a836-e5efcdac1196",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "01386791-7166-4496-bffc-2f89cc8b50a4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Total sales: 2410\n"
+     ]
+    }
+   ],
+   "source": [
+    "# find total sales\n",
+    "\n",
+    "sales = [100,800,500,350,490,170]\n",
+    "\n",
+    "total =0 \n",
+    "\n",
+    "for i in range(len(sales)):\n",
+    "    total += sales[i]\n",
+    "\n",
+    "print('Total sales:', total)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "e46a02d5-95d6-4e54-8051-409c007c6a56",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2410\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(sum(sales))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "2cdda81b-fa5d-4d87-9129-6c22c15119f1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Total sales: 2410\n"
+     ]
+    }
+   ],
+   "source": [
+    "sales = [100,800,500,350,490,170]\n",
+    "\n",
+    "total =0 \n",
+    "\n",
+    "for i in range(len(sales)):\n",
+    "    total = total + sales[i]              # # Added [i] here to get the specific number\n",
+    " \n",
+    "print('Total sales:', total)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c9baead8-85ec-4fbd-8c22-d8d050a87d4d",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "6a6f1de8-7e89-4795-8908-f0c2434e60f5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "50\n",
+      "20\n",
+      "1\n",
+      "-41\n",
+      "90\n"
+     ]
+    }
+   ],
+   "source": [
+    "# calculate groeth month by month\n",
+    "\n",
+    "sales = [20,30,80,100,101,60,150]\n",
+    "\n",
+    "for i in range(1, len(sales)):\n",
+    "    growth = sales[i] - sales[i-1]\n",
+    "    print(growth)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "82815708-eca0-4ff9-9708-e94b80c5cca5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "a81c9889-b139-4ec5-a8ca-2d8b786b6e2b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "25\n",
+      "35\n",
+      "45\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = [5,25,35,45,55]\n",
+    "\n",
+    "for i in range(1,len(data)):\n",
+    "    print(data[i-1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e1f938d6-089b-420e-b15a-af0e948b5888",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "ce498937-6f7f-463c-9d69-ddbcfc7edb16",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "-14\n",
+      "48\n",
+      "-14\n",
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "# compare consecutive records: used in trend analysis\n",
+    "\n",
+    "runs = [35,21,69,55,70]\n",
+    "\n",
+    "for i in range(1, len(runs)):\n",
+    "    print(runs[i] - runs[i-1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0b3695fa-f029-42d6-93a1-91fd730109d9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "193593b0-eb29-4ff2-95d1-9a4e880acc20",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "2\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "# process alternate record\n",
+    "\n",
+    "sales = [100,200,300,400,500,600]\n",
+    "\n",
+    "for i in range(0, len(sales),2):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "120d712e-8bc5-4a40-849d-0a6a6dffd239",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 100\n",
+      "2 300\n",
+      "4 500\n"
+     ]
+    }
+   ],
+   "source": [
+    "sales = [100,200,300,400,500,600]   # useful in sampling\n",
+    "\n",
+    "for i in range(0, len(sales),2):\n",
+    "    print(i, sales[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "32b1c179-16da-4471-97ef-db0a8ae1e48b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "66fec093-ddb7-47a1-82d3-48a4909dd97b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4 500\n",
+      "3 400\n",
+      "2 300\n",
+      "1 200\n",
+      "0 100\n"
+     ]
+    }
+   ],
+   "source": [
+    "# reverse data\n",
+    "\n",
+    "sales = [100,200,300,400,500]\n",
+    "\n",
+    "# print(range(10,1,-1))     # example program\n",
+    "# print(list(sales))\n",
+    "# list(sales)\n",
+    "\n",
+    "for i in range(len(sales)-1,-1,-1):\n",
+    "    print(i, sales[i])"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "230fea9d-fd58-463c-a015-e0eb66d90821",
+   "metadata": {},
+   "source": [
+    "for i in range(len(sales)-1,-1,-1): --->>  explanation\n",
+    "\n",
+    "Understanding the Three Numbers in range()To see exactly how it works, we can replace the formula with actual numbers. Since len(sales) is 5, the code translates to range(4, -1, -1).start = 4 (len(sales) - 1)Python lists start counting at 0.For a list of 5 items, the last index is 4. This is where the loop begins.stop = -1The loop stops before it reaches this number.Because it stops just before -1, the final index it processes is 0 (the first item in your list).step = -1This tells Python to subtract 1 on every turn instead of adding. This makes the loop count down backward.\n",
+    "\n",
+    "Loop Iteration\tIndex (i)\tValue (sales[i])\tPrinted Output\n",
+    "Step 1\t\t4\t\t500\t\t\t4 500\n",
+    "Step 2\t\t3\t\t400\t\t\t3 400\n",
+    "Step 3\t\t2\t\t300\t\t\t2 300\n",
+    "Step 4\t\t1\t\t200\t\t\t1 200\n",
+    "Step 5\t\t0\t\t100\t\t\t0 100\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "b7e39f59-500b-47a8-9937-ff123c5967e5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "8 14\n",
+      "7 35\n",
+      "6 92\n",
+      "5 80\n",
+      "4 47\n",
+      "3 12\n",
+      "2 66\n",
+      "1 55\n",
+      "0 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "r = [10,55,66,12,47,80,92,35,14]\n",
+    "\n",
+    "for i in range(len(r)-1,-1,-1):\n",
+    "    print(i, r[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5a8f3669-1773-45cc-bcdd-7eb20727e989",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "16c81643-2380-4150-80c9-fe1084e4222f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "15\n",
+      "30\n",
+      "45\n",
+      "60\n",
+      "75\n",
+      "90\n",
+      "105\n"
+     ]
+    }
+   ],
+   "source": [
+    "# creating age groups\n",
+    "\n",
+    "for i in range(0,110,15):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "18deb06d-769a-4c03-93eb-46ee8691fae7",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "f75ff9c2-7d39-4b44-b00b-0f9203907cf8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# create monthly periods\n",
+    "\n",
+    "months = list(range(1,13))\n",
+    "print(months)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "041c2541-af90-4128-ad35-bce18c35e5f6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "55e00aad-5665-46c7-8b41-4128ffd3c4d2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 6, 11, 16, 21, 26, 31, 36, 41, 46, 51, 56]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# create dummy dataset\n",
+    "\n",
+    "data = []\n",
+    "\n",
+    "for i in range(1,60,5):\n",
+    "    data.append(i)\n",
+    "\n",
+    "print(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a64f29d3-8919-49c1-9cb5-2bab1ceecece",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "1d2c5da7-0e45-41e5-a059-1b9c61d4becd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n",
+      "4\n",
+      "6\n",
+      "8\n",
+      "10\n",
+      "12\n",
+      "14\n",
+      "16\n",
+      "18\n",
+      "20\n"
+     ]
+    }
+   ],
+   "source": [
+    "# check even numbers\n",
+    "\n",
+    "for n in range(2,21,2):\n",
+    "    print(n)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4fada2d8-f6bd-459e-aba6-3623da2930c6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "abdd831a-066e-499b-9c4f-a1055fc7e272",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "3\n",
+      "5\n",
+      "7\n",
+      "9\n",
+      "11\n",
+      "13\n",
+      "15\n",
+      "17\n",
+      "19\n"
+     ]
+    }
+   ],
+   "source": [
+    "# check odd numbers\n",
+    "\n",
+    "for n in range(1,21,2):\n",
+    "    print(n)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d8494fdf-61f7-4c1e-a25a-f7a34d2df176",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "id": "2a746c53-7d2a-45df-9612-b1dfb6ba2d45",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "116.66666666666667\n",
+      "133.33333333333334\n",
+      "150.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# window analysis : This concept is used in moving averages.\n",
+    "\n",
+    "sales = [100,120,130,150,170]\n",
+    "\n",
+    "for i in range(len(sales)-2):                           # this excute range till 0,1,2 only 3,4 exceluded here\n",
+    "    avg = (sales[i] + sales[i+1] + sales[i+2]) /3\n",
+    "    print(avg)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "909cf257-b93f-4bff-a7c9-ae7e37dbd6b8",
+   "metadata": {},
+   "source": [
+    "Your list has 5 items. len(sales) - 2 evaluates to 3. Therefore, range(3) generates the indices 0, 1, and 2.The loop stops here on purpose. If it went any further, the sales[i+2] part of your code would look for indices that do not exist (like index 5 or 6), causing the program to crash with an IndexError.\n",
+    "\n",
+    "nside the Formula: (sales[i] + sales[i+1] + sales[i+2]) / 3For any given step in the loop, Python grabs three specific items:sales[i]: The current item.sales[i+1]: The next item.sales[i+2]: The item after next.\n",
+    "\n",
+    "Step-by-Step ExecutionHere is exactly what Python calculates during each of the three steps:\n",
+    "\n",
+    "Loop Iteration\tIndex (i)\tGrouped Items\t\tMath Operation\t\t\tResult (avg)\n",
+    "Step   1\t\t      0\t\t100, 120, 130\t\t(100 + 120 + 130) / 3\t\t116.67\n",
+    "Step   2\t\t      1\t\t120, 130, 150\t\t(120 + 130 + 150) / 3\t\t133.33\n",
+    "Step   3\t\t      2\t\t130, 150, 170\t\t(130 + 150 + 170) / 3\t\t150.00\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3901489d-a423-4731-8abe-15be0b600c2f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# sample running of above program\n",
+    "\n",
+    "sales = [100,120,130,150,170]\n",
+    "\n",
+    "for i in range(len(sales)-2):\n",
+    "    print(i, sales[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bb8b5516-7998-4fc2-9f91-4269f6f179a5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "raw",
+   "id": "dcd6d445-ffab-482f-a99e-5e3f251737c9",
+   "metadata": {},
+   "source": [
+    "# print 1 -100\n",
+    "\n",
+    "for i in range(1,101):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "84fa9058-8069-4775-89f3-8f1b37b7ef4c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(list(range(1,101)))         # both  works same"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d34b1241-efe2-4dd5-9d9b-821b323912b5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "5017ed8a-6e1e-44c4-beef-d2126d560087",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "range(100, 0, -1)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# print reverse\n",
+    "\n",
+    "print(range(100,0,-1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "bb273fe8-d587-4f8e-b82f-b7a4b1d8caed",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(list(range(100,0,-1)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "46a97abc-f5b1-4e72-b47c-9e8116e078f6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "798030df-4bbc-42c6-a793-2c76872ceda9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "range(5, 51, 5)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# print numbers mutiple of 5\n",
+    "\n",
+    "print(range(5,51,5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "id": "26134125-0ea8-4ac0-9849-cf719ab1a9ce",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5, 10, 15, 20, 25, 30, 35, 40, 45, 50]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(list(range(5,51,5)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d0c2a590-3835-4038-8749-a91b6c8b7219",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "9ecb8ac6-ff0e-4a3c-a3bd-a415e61707d2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5050\n"
+     ]
+    }
+   ],
+   "source": [
+    "# print sum numbers from  1 to 100\n",
+    "\n",
+    "total = 0\n",
+    "\n",
+    "for i in range(1,101):\n",
+    "    total = total + i\n",
+    "\n",
+    "print(total)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "id": "54ddf23f-a96a-4bcf-9093-c08505cca109",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5050\n"
+     ]
+    }
+   ],
+   "source": [
+    "total = 0\n",
+    "\n",
+    "for i in range(1,101):\n",
+    "    total += i                 # same o/p for this line also\n",
+    "\n",
+    "print(total)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f89cd570-e581-48f1-b0be-e6167ba325ee",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "85e0d845-fb1e-4061-849a-430c7f06f0d6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d2f0f21-c352-4ffd-ab6f-426ba4b6791e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e1d874cf-055a-43a9-9e99-6792039ecfa6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "80ee0388-2021-443a-9a72-765911ec5baf",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0658f378-f244-44d2-9c62-91db9ea9d15e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "08240963-3348-476c-96d7-7f42994ba410",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2d17fbf8-c7c5-4000-bf35-d42f993d4c8e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3.14.5",
+   "language": "python",
+   "name": "py3145"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
